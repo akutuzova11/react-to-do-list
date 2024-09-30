@@ -1,32 +1,35 @@
-.todoForm__button {
-    padding: 10px;
-    background-color: teal;
-    color: #fff;
+.todoSection__buttonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.todoSection__buttons{
+    background-color: transparent;
     border: none;
-    transition: 0.5s;
-}
+    color: teal;
+    margin-left: 10px;
 
-.todoForm__button:hover {
-    background-color: hsl(180, 100%, 30%);
-    transform: scale(1.1);
-}
-
-.todoForm__button:active {
-    background-color: hsl(180, 100%, 35%);
-}
-
-.todoForm__newItem {
-    border: 2px solid #ddd;
-    padding: 10px;
-}
-
-.todoForm__newItem:focus {
-    outline: 2px solid black;
-    border-radius: 2px;
 }
 
 @media (max-width: 767px) {
-    .todoForm__newItem {
-        min-width: 50%;
+    .todoSection__buttons {
+        margin: 10px;
+        flex-basis: 100%;
     }
+}
+
+.todoSection__buttons:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.todoSection__buttons:active {
+    color: hsl(180, 100%, 40%);
+}
+
+.todoSection__buttons--hidden{
+    visibility: hidden;
+}
+
+.todoSection__buttons:disabled{
+    color: #ddd;
 }

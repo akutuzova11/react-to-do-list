@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 const Tasks = ({tasks, hideCompletedTasks}) => (
-  <ul classNameName="todoTasks">
+  <ul className="todoTasks">
     {tasks.map((task) => (
       <li
         key={task.id}

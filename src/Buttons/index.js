@@ -3,7 +3,7 @@ import "./style.css";
 
 const Buttons = ({ tasks, hideCompletedTasks }) => (
   <div className="todoSection__buttonsContainer">
-    {tasks.legth > 0 && (
+    {tasks.length > 0 && (
       <React.Fragment>
         <button className="todoSection__buttons">
           {hideCompletedTasks ? "Pokaż" : "Ukryj"} ukończone
