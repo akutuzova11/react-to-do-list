@@ -7,8 +7,8 @@ import Header from "./Header";
 import Container from "./Container";
 
 const tasks = [
-  { id: 1, content: "przejsc na Reakta", completed: false },
-  { id: 2, content: "zjesc obiad", completed: true },
+  { id: 1, content: "Przejść na Reakta", completed: false },
+  { id: 2, content: "Zjeść obiad", completed: true },
 ];
 
 const hideCompletedTasks = false;
