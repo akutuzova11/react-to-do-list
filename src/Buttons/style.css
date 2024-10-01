@@ -1,9 +1,9 @@
-.todoSection__buttonsContainer{
+.todoSectionContainer{
     display: flex;
     flex-wrap: wrap;
 }
 
-.todoSection__buttons{
+.todoSectionContainer__buttons{
     background-color: transparent;
     border: none;
     color: teal;
@@ -12,24 +12,24 @@
 }
 
 @media (max-width: 767px) {
-    .todoSection__buttons {
+    .todoSectionContainer__buttons {
         margin: 10px;
         flex-basis: 100%;
     }
 }
 
-.todoSection__buttons:hover {
+.todoSectionContainer__buttons:hover {
     color: hsl(180, 100%, 35%);
 }
 
-.todoSection__buttons:active {
+.todoSectionContainer__buttons:active {
     color: hsl(180, 100%, 40%);
 }
 
-.todoSection__buttons--hidden{
+.todoSectionContainer__buttons--hidden{
     visibility: hidden;
 }
 
-.todoSection__buttons:disabled{
+.todoSectionContainer__buttons:disabled{
     color: #ddd;
 }
