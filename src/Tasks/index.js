@@ -22,7 +22,7 @@ const Tasks = ({tasks, hideCompletedTasks}) => (
         >
           {task.content}
         </span>
-        <button className=" todoTasks__button--deleted">🗑</button>
+        <button className="todoTasks__button todoTasks__button--deleted">🗑</button>
       </li>
     ))}
   </ul>
