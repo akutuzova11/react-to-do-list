@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 
-const Buttons = ({ tasks, hideCompletedTasks }) => (
+const Buttons = ({ tasks, hideCompletedTasks, toggleHideCompleted }) => (
   <div className="todoSectionContainer">
     {tasks.length > 0 && (
       <>
-        <button className="todoSectionContainer__buttons">
+        <button onClick={toggleHideCompleted} className="todoSectionContainer__buttons">
           {hideCompletedTasks ? "Pokaż" : "Ukryj"} ukończone
         </button>
         <button
