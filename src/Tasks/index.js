@@ -1,7 +1,12 @@
 import React from "react";
 import "./style.css";
 
-const Tasks = ({ tasks, hideCompletedTasks, removeTask }) => (
+const Tasks = ({
+  tasks,
+  hideCompletedTasks,
+  removeTask,
+  toggleTaskCompleted,
+}) => (
   <ul className="todoTasks">
     {tasks.map((task) => (
       <li
@@ -10,7 +15,10 @@ const Tasks = ({ tasks, hideCompletedTasks, removeTask }) => (
           task.completed && hideCompletedTasks ? "todoTasks__items--hidden" : ""
         }`}
       >
-        <button className="todoTasks__button">
+        <button
+          className="todoTasks__button"
+          onClick={() => toggleTaskCompleted(task.id)}
+        >
           {task.completed ? "✔" : ""}
         </button>
         <span
@@ -20,8 +28,9 @@ const Tasks = ({ tasks, hideCompletedTasks, removeTask }) => (
         >
           {task.content}
         </span>
-        <button className="todoTasks__button todoTasks__button--deleted"
-        onClick={()=>removeTask(task.id)}
+        <button
+          className="todoTasks__button todoTasks__button--deleted"
+          onClick={() => removeTask(task.id)}
         >
           🗑
         </button>

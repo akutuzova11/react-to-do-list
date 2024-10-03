@@ -21,13 +21,28 @@ function App() {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
+  const toggleTaskCompleted = (id) => {
+    setTasks((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
+
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section title="Dodaj nowe zadanie" body={<Form />} />
       <Section
         title="Lista zadań"
-        body={<Tasks tasks={tasks} hideCompletedTasks={hideCompletedTasks} removeTask={removeTask} />}
+        body={
+          <Tasks
+            tasks={tasks}
+            hideCompletedTasks={hideCompletedTasks}
+            removeTask={removeTask}
+            toggleTaskCompleted={toggleTaskCompleted}
+          />
+        }
         extraHeaderContent={
           <Buttons
             tasks={tasks}
