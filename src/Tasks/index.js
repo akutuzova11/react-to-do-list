@@ -26,7 +26,7 @@ const Tasks = ({
             task.completed ? "todoTasks__item--toggleCompleted" : ""
           }`}
         >
-          {task.content}
+          {task.id} - {task.content} 
         </span>
         <button
           className="todoTasks__button todoTasks__button--deleted"
