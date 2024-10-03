@@ -4,7 +4,7 @@ This web application is your ideal solution for managing tasks effortlessly.
 
 Easily add, remove, and toggle the completion status of tasks with a user-friendly interface to keep your to-do list organized and stay productive!
 
-![](https://github.com/akutuzova11/react-to-do-list/blob/main/public/images/to-do-list-image-for-readme.png)
+![](https://github.com/akutuzova11/react-to-do-list/blob/main/public/images/gif%20for%20readme%204.gif)
 
 ## Demo
 
