@@ -6,24 +6,28 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-const tasks = [
-  { id: 1, content: "Przejść na Reakta", completed: false },
-  { id: 2, content: "Zjeść obiad", completed: true },
-];
-
 function App() {
   const [hideCompletedTasks, setHideCompleted] = useState(false);
+  const [tasks, setTasks] = useState([
+    { id: 1, content: "Przejść na Reakta", completed: false },
+    { id: 2, content: "Zjeść obiad", completed: true },
+  ]);
 
   const toggleHideCompleted = () => {
-    setHideCompleted((hideCompletedTasks => !hideCompletedTasks));
+    setHideCompleted((hideCompletedTasks) => !hideCompletedTasks);
   };
+
+  const removeTask = (id) => {
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
+  };
+
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section title="Dodaj nowe zadanie" body={<Form />} />
       <Section
         title="Lista zadań"
-        body={<Tasks tasks={tasks} hideCompletedTasks={hideCompletedTasks} />}
+        body={<Tasks tasks={tasks} hideCompletedTasks={hideCompletedTasks} removeTask={removeTask} />}
         extraHeaderContent={
           <Buttons
             tasks={tasks}
