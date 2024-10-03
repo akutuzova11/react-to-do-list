@@ -9,8 +9,8 @@ import Container from "./Container";
 function App() {
   const [hideCompletedTasks, setHideCompleted] = useState(false);
   const [tasks, setTasks] = useState([
-    { id: 1, content: "Przejść na Reakta", completed: false },
-    { id: 2, content: "Zjeść obiad", completed: true },
+    { id: 1, content: "Spacer w parku", completed: false },
+    { id: 2, content: "Yoga o 19:30", completed: true },
   ]);
 
   const toggleHideCompleted = () => {
