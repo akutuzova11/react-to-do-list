@@ -6,12 +6,14 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
+const defaultTasks = [
+  { id: 1, content: "Spacer w parku", completed: false },
+  { id: 2, content: "Yoga o 19:30", completed: true },
+];
+
 function App() {
   const [hideCompletedTasks, setHideCompleted] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "Spacer w parku", completed: false },
-    { id: 2, content: "Yoga o 19:30", completed: true },
-  ]);
+  const [tasks, setTasks] = useState(defaultTasks);
 
   const toggleHideCompleted = () => {
     setHideCompleted((hideCompletedTasks) => !hideCompletedTasks);
@@ -34,13 +36,23 @@ function App() {
   };
 
   const addNewTask = (newTaskContent) => {
-    setTasks(tasks => [...tasks, {content: newTaskContent, completed: false, id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, }])
-  }
+    setTasks((tasks) => [
+      ...tasks,
+      {
+        content: newTaskContent,
+        completed: false,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+      },
+    ]);
+  };
 
   return (
     <Container>
       <Header title="Lista zadań" />
-      <Section title="Dodaj nowe zadanie" body={<Form addNewTask={addNewTask} />} />
+      <Section
+        title="Dodaj nowe zadanie"
+        body={<Form addNewTask={addNewTask} />}
+      />
       <Section
         title="Lista zadań"
         body={
