@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -12,11 +12,18 @@ const defaultTasks = [
 ];
 
 function App() {
-  const [hideCompletedTasks, setHideCompleted] = useState(false);
-  const [tasks, setTasks] = useState(defaultTasks);
+  const [hideCompletedTasks, setHideCompletedTasks] = useState(false);
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    return savedTasks ? JSON.parse(savedTasks) : defaultTasks;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const toggleHideCompleted = () => {
-    setHideCompleted((hideCompletedTasks) => !hideCompletedTasks);
+    setHideCompletedTasks((hideCompletedTasks) => !hideCompletedTasks);
   };
 
   const removeTask = (id) => {
