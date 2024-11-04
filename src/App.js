@@ -13,10 +13,7 @@ const defaultTasks = [
 
 function App() {
   const [hideCompletedTasks, setHideCompletedTasks] = useState(false);
-  const [tasks, setTasks] = useState(() => {
-    const savedTasks = localStorage.getItem("tasks");
-    return savedTasks ? JSON.parse(savedTasks) : defaultTasks;
-  });
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || defaultTasks);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
