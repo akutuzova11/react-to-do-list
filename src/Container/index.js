@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import {Wrapper} from "./styled.js"
 
 const Container = ({ children }) => (
-  <main className="todoContainer">{children}</main>
+  <Wrapper>{children}</Wrapper>
 );
 
 export default Container;
