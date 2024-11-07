@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import { List, Item, Content, Button } from "./styled.js";
 
 const Tasks = ({
   tasks,
@@ -7,36 +7,19 @@ const Tasks = ({
   removeTask,
   toggleTaskCompleted,
 }) => (
-  <ul className="todoTasks">
+  <List>
     {tasks.map((task) => (
-      <li
-        key={task.id}
-        className={`todoTasks__item ${
-          task.completed && hideCompletedTasks ? "todoTasks__items--hidden" : ""
-        }`}
-      >
-        <button
-          className="todoTasks__button"
-          onClick={() => toggleTaskCompleted(task.id)}
-        >
+      <Item key={task.id} hidden={task.completed && hideCompletedTasks}>
+        <Button onClick={() => toggleTaskCompleted(task.id)}>
           {task.completed ? "✔" : ""}
-        </button>
-        <span
-          className={`${
-            task.completed ? "todoTasks__item--toggleCompleted" : ""
-          }`}
-        >
-          {task.id} - {task.content} 
-        </span>
-        <button
-          className="todoTasks__button todoTasks__button--deleted"
-          onClick={() => removeTask(task.id)}
-        >
+        </Button>
+        <Content completed={task.completed}>{task.content}</Content>
+        <Button deleted onClick={() => removeTask(task.id)}>
           🗑
-        </button>
-      </li>
+        </Button>
+      </Item>
     ))}
-  </ul>
+  </List>
 );
 
 export default Tasks;
