@@ -1,8 +1,6 @@
 import React from "react";
-import {Wrapper} from "./styled.js"
+import { Wrapper } from "./styled.js";
 
-const Container = ({ children }) => (
-  <Wrapper>{children}</Wrapper>
-);
+const Container = ({ children }) => <Wrapper>{children}</Wrapper>;
 
 export default Container;

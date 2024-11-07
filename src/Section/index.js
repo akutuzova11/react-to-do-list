@@ -1,5 +1,5 @@
 import React from "react";
-import {Segment, Header, Container, Title } from "./styled.js"
+import { Segment, Header, Container, Title } from "./styled.js";
 
 const Section = ({ title, body, extraHeaderContent }) => (
   <Segment>
