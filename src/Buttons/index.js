@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import { Container, Selectors } from "./styled.js";
 
 const Buttons = ({
   tasks,
@@ -7,25 +7,21 @@ const Buttons = ({
   toggleHideCompleted,
   setAllCompleted,
 }) => (
-  <div className="todoSectionContainer">
+  <Container>
     {tasks.length > 0 && (
       <>
-        <button
-          onClick={toggleHideCompleted}
-          className="todoSectionContainer__buttons"
-        >
+        <Selectors onClick={toggleHideCompleted}>
           {hideCompletedTasks ? "Pokaż" : "Ukryj"} ukończone
-        </button>
-        <button
+        </Selectors>
+        <Selectors
           onClick={setAllCompleted}
-          className="todoSectionContainer__buttons"
           disabled={tasks.every(({ completed }) => completed)}
         >
           Ukończ wszystkie
-        </button>
+        </Selectors>
       </>
     )}
-  </div>
+  </Container>
 );
 
 export default Buttons;
