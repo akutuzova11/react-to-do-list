@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-export const useTasks = (defaultTasks, setHideCompletedTasks) => {
+export const useTasks = () => {
+  const defaultTasks = [
+    { id: 1, content: "Spacer w parku", completed: false },
+    { id: 2, content: "Yoga o 19:30", completed: true },
+  ];
+
+  const [hideCompletedTasks, setHideCompletedTasks] = useState(false);
+
   const [tasks, setTasks] = useState(() => {
     const savedTasks = localStorage.getItem("tasks");
     return savedTasks ? JSON.parse(savedTasks) : defaultTasks;
@@ -42,7 +49,7 @@ export const useTasks = (defaultTasks, setHideCompletedTasks) => {
   };
   return {
     tasks,
-    setTasks,
+    hideCompletedTasks,
     toggleHideCompleted,
     removeTask,
     toggleTaskCompleted,

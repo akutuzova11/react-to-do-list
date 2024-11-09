@@ -7,23 +7,16 @@ import Header from "./Header";
 import Container from "./Container";
 import { useTasks } from "./useTasks.js";
 
-const defaultTasks = [
-  { id: 1, content: "Spacer w parku", completed: false },
-  { id: 2, content: "Yoga o 19:30", completed: true },
-];
-
 function App() {
-  const [hideCompletedTasks, setHideCompletedTasks] = useState(false);
-  
-
   const {
     tasks,
+    hideCompletedTasks,
     toggleHideCompleted,
     removeTask,
     toggleTaskCompleted,
     setAllCompleted,
     addNewTask,
-  } = useTasks(defaultTasks, setHideCompletedTasks);
+  } = useTasks();
 
   return (
     <Container>
