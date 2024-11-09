@@ -5,7 +5,7 @@ export const Wrapper = styled.main`
   max-width: 900px;
   margin: 0 auto;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     padding: 15px;
   }
 `;

@@ -5,7 +5,7 @@ export const Template = styled.form`
   grid-template-columns: 1fr auto;
   gap: 20px;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     grid-template-columns: 1fr;
     gap: 10px;
   }
@@ -13,18 +13,18 @@ export const Template = styled.form`
 
 export const Button = styled.button`
   padding: 10px;
-  background-color: teal;
-  color: #fff;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.buttonText};
   border: none;
   transition: 0.5s;
 
   &:hover {
-    background-color: hsl(180, 100%, 30%);
+    background-color: ${({ theme }) => theme.colors.buttonSubmitHover};
     transform: scale(1.1);
   }
 
   &:active {
-    background-color: hsl(180, 100%, 35%);
+    background-color: ${({ theme }) => theme.colors.buttonSubmitHover};
   }
 `;
 
@@ -37,7 +37,7 @@ export const NewItem = styled.input`
     border-radius: 2px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     min-width: 50%;
   }
 `;

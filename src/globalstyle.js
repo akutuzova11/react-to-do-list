@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #F0F0F0;
+  background-color: ${({ theme }) => theme.colors.background};
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   word-break: break-word;

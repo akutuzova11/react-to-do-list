@@ -33,8 +33,8 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
-  color: #fff;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.buttonText};
   border: none;
   width: 30px;
   height: 30px;
@@ -43,24 +43,24 @@ export const Button = styled.button`
   transition: background 0.4s;
 
   &:hover {
-    background-color: hsl(120, 100%, 30%);
+    background-color: ${({ theme }) => theme.colors.buttonCompletedHover};
   }
 
   &:active {
-    background-color: hsl(120, 100%, 35%);
+    background-color: ${({ theme }) => theme.colors.buttonCompletedActive};
   }
 
   ${({ deleted }) =>
     deleted &&
     css`
-      background-color: rgb(250, 48, 48);
+      background-color: ${({ theme }) => theme.colors.ButtonRemove};
 
       &:hover {
-        background-color: hsl(0, 100%, 65%);
+        background-color: ${({ theme }) => theme.colors.ButtonRemoveHover};
       }
 
       &:active {
-        background-color: hsl(0, 100%, 75%);
+        background-color: ${({ theme }) => theme.colors.ButtonRemoveActive};
       }
     `}
 `;
