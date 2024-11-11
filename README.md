@@ -12,12 +12,37 @@ https://akutuzova11.github.io/react-to-do-list/
 
 ## Built with
 
-  - HTML
-  - CSS
-  - BEM
-  - JS ES6+
-  - JSX
-  - REACT
+### Languages & Libraries
+- **HTML**
+- **CSS**
+- **JavaScript (ES6+)**
+- **JSX**
+- **React**
+
+### React Features
+- **React Hooks:**
+  - `useState`
+  - `useEffect`
+  - `useRef`
+- **Custom Hooks:**
+  - `useTasks`
+  - `useLocalStorageState`
+
+### Styling
+- **Styled Components:**
+  - `GlobalStyle`
+  - `Theme`
+
+### Layout & Responsiveness
+- **CSS Layout Techniques:**
+  - Grid
+  - Flexbox
+- **Responsive Design:**
+  - Media Querie
+
+### Additional Features
+- **localStorage** for data persistence
+- **Immutability** practices to ensure state consistency
 
 ## Usage
 
