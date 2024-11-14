@@ -1,7 +1,7 @@
 import React from "react";
 import { List, Item, Content, Button } from "./styled.js";
 
-const Tasks = ({
+const TaskList = ({
   tasks,
   hideCompletedTasks,
   removeTask,
@@ -22,4 +22,4 @@ const Tasks = ({
   </List>
 );
 
-export default Tasks;
+export default TaskList;
