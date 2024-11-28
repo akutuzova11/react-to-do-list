@@ -1,3 +1,3 @@
-import Tasks from "./Features/tasks/Tasks";
+import Tasks from "./Features/tasks/tasks";
 
 export default () => <Tasks />;

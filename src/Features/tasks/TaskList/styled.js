@@ -30,15 +30,12 @@ export const Content = styled.span`
 `;
 
 export const Button = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.buttonText};
   border: none;
   width: 30px;
   height: 30px;
-  padding: 0px;
+  padding: 5px;
   margin: 0;
   transition: background 0.4s;
 

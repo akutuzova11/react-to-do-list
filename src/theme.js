@@ -16,6 +16,6 @@ export const theme = {
       ButtonRemoveActive: "hsl(0, 100%, 75%)",
     },
     breakpoints: {
-      mobile: "767px",
+      mobile: 767,
     },
   };
