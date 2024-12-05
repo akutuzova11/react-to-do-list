@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
 `;
 
-export const Selectors = styled.button`
+export const ButtonStyled = styled.button`
   background-color: transparent;
   border: none;
   color: ${({theme})=>theme.colors.primary};
