@@ -1,4 +1,4 @@
-import { createSlice, createSelector } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { getTasksFromLocalStorage } from "./tasksLocalStorage";
 
 const tasksSlice = createSlice({
@@ -6,6 +6,7 @@ const tasksSlice = createSlice({
   initialState: {
     tasks: getTasksFromLocalStorage(),
     hideCompleted: false,
+    tasksAreLoading: false,
   },
   reducers: {
     addTask: ({ tasks }, { payload }) => {
@@ -31,6 +32,9 @@ const tasksSlice = createSlice({
     setTasks: (state, { payload: tasks }) => {
       state.tasks = tasks;
     },
+    toggleTasksAreLoading: (state) => {
+      state.tasksAreLoading = !state.tasksAreLoading;
+    },
   },
 });
 
@@ -42,11 +46,16 @@ export const {
   setAllCompleted,
   fetchExampleTasks,
   setTasks,
+  toggleTasksAreLoading,
 } = tasksSlice.actions;
 
-export const selectTasks = (state) => state.tasks?.tasks || [];
-export const selectHideCompleted = ({ tasks }) => tasks.hideCompleted;
+const selectTasksState = (state) => state.tasks;
 
+export const selectTasks = (state) => selectTasksState(state).tasks;
+export const selectHideCompleted = (state) =>
+  selectTasksState(state).hideCompleted;
+export const selectTasksAreLoading = (state) =>
+  selectTasksState(state).tasksAreLoading;
 export const getTaskByID = (state, taskId) =>
   selectTasks(state).find(({ id }) => id === taskId);
 
@@ -61,4 +70,3 @@ export const selectTasksByQuery = (state, query) => {
 };
 
 export default tasksSlice.reducer;
-
