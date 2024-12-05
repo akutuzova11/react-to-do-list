@@ -1,12 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createSelector } from "@reduxjs/toolkit";
+import { getTasksFromLocalStorage } from "./tasksLocalStorage";
 
 const tasksSlice = createSlice({
   name: "tasks",
   initialState: {
-    tasks: [
-      { id: 1, content: "Spacer w parku", completed: false },
-      { id: 2, content: "Yoga o 19:30", completed: true },
-    ],
+    tasks: getTasksFromLocalStorage(),
     hideCompleted: false,
   },
   reducers: {
@@ -29,6 +27,10 @@ const tasksSlice = createSlice({
         completed: true,
       }));
     },
+    fetchExampleTasks: () => {},
+    setTasks: (state, { payload: tasks }) => {
+      state.tasks = tasks;
+    },
   },
 });
 
@@ -42,6 +44,20 @@ export const {
   setTasks,
 } = tasksSlice.actions;
 
-export const selectTasks = (state) => state.tasks.tasks;
+export const selectTasks = (state) => state.tasks?.tasks || [];
 export const selectHideCompleted = ({ tasks }) => tasks.hideCompleted;
+
+export const getTaskByID = (state, taskId) =>
+  selectTasks(state).find(({ id }) => id === taskId);
+
+export const selectTasksByQuery = (state, query) => {
+  const tasks = selectTasks(state);
+  if (!query || query.trim() === "") {
+    return tasks;
+  }
+  return tasks.filter(({ content }) =>
+    content.toUpperCase().includes(query.trim().toUpperCase())
+  );
+};
+
 export default tasksSlice.reducer;
