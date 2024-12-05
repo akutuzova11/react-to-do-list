@@ -5,7 +5,8 @@ import Section from "../../../Common/Section/index.js";
 import Header from "../../../Common/Header/index.js";
 import { Container } from "../../../Common/Container/index.js";
 import { useLocation } from "react-router-dom";
-import {Search} from "./Search"
+import { Search } from "./Search";
+import FetchButton from "./FetchButton/index.js";
 
 function TasksPage() {
   const location = useLocation();
@@ -16,7 +17,11 @@ function TasksPage() {
 
       <Header title="Lista zadań" />
 
-      <Section title="Dodaj nowe zadanie" body={<Form />} />
+      <Section
+        title="Dodaj nowe zadanie"
+        body={<Form />}
+        extraHeaderContent={<FetchButton />}
+      />
 
       <Section title="Wyszukiwarka" body={<Search />} />
 
