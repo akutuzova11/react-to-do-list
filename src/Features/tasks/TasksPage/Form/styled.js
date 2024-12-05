@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Template = styled.form`
+export const FormStyled = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 20px;

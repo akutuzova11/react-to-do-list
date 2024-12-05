@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { Template, Button } from "./styled.js";
+import { FormStyled, Button } from "./styled.js";
 import { addTask } from "../../TasksSlice.js";
 import { nanoid } from "@reduxjs/toolkit";
 import Input from "../../Input/index.js";
@@ -29,7 +29,7 @@ const Form = () => {
   };
 
   return (
-    <Template onSubmit={onFormSubmit}>
+    <FormStyled onSubmit={onFormSubmit}>
       <Input
         ref={inputRef}
         value={newTaskContent}
@@ -38,7 +38,7 @@ const Form = () => {
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
       <Button type="submit">Dodaj zadanie</Button>
-    </Template>
+    </FormStyled>
   );
 };
 
