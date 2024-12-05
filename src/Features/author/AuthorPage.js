@@ -7,8 +7,8 @@ export default () => (
     <Header title="O autorze" />
     <Section title="Angelina Kutuzova" body={<> 
         <p> Odkrywanie nowych miejsc przez podróże to dla mnie nie tylko fascynująca przygoda, ale także pasja, która
-          nadaje mojemu życiu barwę i głębię. W 2023 roku udało mi się zrealizować swoje marzenie o odwiedzeniu
-          <strong>17 różnych miast,</strong> co było dla mnie niezapomnianym doświadczeniem.
+          nadaje mojemu życiu barwę i głębię. W 2023 roku udało mi się zrealizować swoje marzenie o odwiedzeniu 
+          <strong> 17 różnych miast,</strong> co było dla mnie niezapomnianym doświadczeniem.
         </p>
         <p>Postawiłam sobie ambitny cel podróżowania co najmniej raz w miesiącu, <strong>a z dumą mogę powiedzieć, że
             udało mi się go osiągnąć!</strong> Każda wyprawa była unikalnym wyzwaniem, które nie tylko poszerzało moje

@@ -14,10 +14,12 @@ function TaskPage() {
       <Section
         title={task ? task.content : "Nie znaleziono zadania 😿"}
         body={
-          <>
-            <strong>Ukończono: </strong>
-            {task.completed ? "Tak" : "Nie"}
-          </>
+          !!task && (
+            <>
+              <strong>Ukończono: </strong>
+              {task.completed ? "Tak" : "Nie"}
+            </>
+          )
         }
       />
     </Container>
