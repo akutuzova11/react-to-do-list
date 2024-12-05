@@ -3,7 +3,7 @@ import Header from "../../../Common/Header/index.js";
 import { Container } from "../../../Common/Container/index.js";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { getTaskByID } from "../tasksSlice.js";
+import { getTaskByID } from "../TasksSlice.js";
 
 function TaskPage() {
   const { id } = useParams();

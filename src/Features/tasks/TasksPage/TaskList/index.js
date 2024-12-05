@@ -6,7 +6,7 @@ import {
   selectHideCompleted,
   removeTask,
   selectTasksByQuery,
-} from "../../tasksSlice.js";
+} from "../../TasksSlice.js";
 import { Link, useLocation } from "react-router-dom";
 import searchQueryParamName from "../searchQueryParamName.js";
 

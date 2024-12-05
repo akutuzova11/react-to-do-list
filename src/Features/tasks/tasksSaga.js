@@ -6,7 +6,7 @@ import {
   select,
   takeEvery,
 } from "redux-saga/effects";
-import { fetchExampleTasks, setTasks, selectTasks } from "./tasksSlice";
+import { fetchExampleTasks, setTasks, selectTasks } from "./TasksSlice.js";
 import { getExampleTasks } from "./getExampleTasks";
 import { saveTasksInLocalStorage } from "./tasksLocalStorage";
 
