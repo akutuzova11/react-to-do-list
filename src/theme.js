@@ -14,6 +14,7 @@ export const theme = {
       ButtonRemove: "rgb(250, 48, 48)",
       ButtonRemoveHover: "hsl(0, 100%, 65%)",
       ButtonRemoveActive: "hsl(0, 100%, 75%)",
+      NavTextColor: "white"
     },
     breakpoints: {
       mobile: 767,
