@@ -4,7 +4,7 @@ This web application helps you manage tasks effortlessly with features like task
 
 Built with modern React practices like custom hooks and styled-components, it combines functionality with sleek design to keep your productivity on track.
 
-![](https://github.com/akutuzova11/react-to-do-list/blob/main/public/images/gif%20for%20readme%204.gif)
+![](https://github.com/akutuzova11/react-to-do-list/blob/main/public/images/gif%20for%20readme_1.gif)
 
 ## Demo
 
