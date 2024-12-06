@@ -5,7 +5,7 @@ import {
   delay,
   select,
   takeLatest,
-  takeEvery
+  takeEvery,
 } from "redux-saga/effects";
 import {
   fetchExampleTasks,

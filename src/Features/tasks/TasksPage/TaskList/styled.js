@@ -5,7 +5,6 @@ export const List = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 0;
-  
 `;
 
 export const Item = styled.li`
@@ -15,7 +14,6 @@ export const Item = styled.li`
   border-bottom: 2px solid #ddd;
   padding: 10px;
   gap: 10px;
-  
 
   ${({ hidden }) =>
     hidden &&
@@ -66,6 +64,6 @@ export const Button = styled.button`
 `;
 
 export const LinkStyled = styled(Link)`
-text-decoration: none;
-color: ${({ theme }) => theme.colors.primary};
-`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.primary};
+`;

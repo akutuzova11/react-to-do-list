@@ -8,24 +8,24 @@ export const Container = styled.div`
 export const ButtonStyled = styled.button`
   background-color: transparent;
   border: none;
-  color: ${({theme})=>theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   margin-left: 10px;
 
-  @media (max-width:  ${({theme}) => theme.breakpoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin: 10px;
     flex-basis: 100%;
   }
 
   &:hover {
-    color: ${({theme})=>theme.colors.buttonSubmitHover};
+    color: ${({ theme }) => theme.colors.buttonSubmitHover};
   }
 
   &:active {
-    color: ${({theme})=>theme.colors.buttonSubmitActive};
+    color: ${({ theme }) => theme.colors.buttonSubmitActive};
   }
 
   &:disabled {
-    color: ${({theme})=>theme.colors.buttonDisabled};
+    color: ${({ theme }) => theme.colors.buttonDisabled};
   }
 
   ${({ isHidden }) =>
