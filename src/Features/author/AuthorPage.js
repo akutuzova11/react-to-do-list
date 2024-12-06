@@ -5,22 +5,36 @@ import { Container } from "../../Common/Container/index.js";
 export default () => (
   <Container>
     <Header title="O autorze" />
-    <Section title="Angelina Kutuzova" body={<> 
-        <p> Odkrywanie nowych miejsc przez podróże to dla mnie nie tylko fascynująca przygoda, ale także pasja, która
-          nadaje mojemu życiu barwę i głębię. W 2023 roku udało mi się zrealizować swoje marzenie o odwiedzeniu 
-          <strong> 17 różnych miast,</strong> co było dla mnie niezapomnianym doświadczeniem.
-        </p>
-        <p>Postawiłam sobie ambitny cel podróżowania co najmniej raz w miesiącu, <strong>a z dumą mogę powiedzieć, że
-            udało mi się go osiągnąć!</strong> Każda wyprawa była unikalnym wyzwaniem, które nie tylko poszerzało moje
-          horyzonty, ale również rozwijało moje umiejętności elastycznego radzenia sobie z niespodziewanymi sytuacjami.
-        </p>
-        <p>Planowanie każdej podróży wymagało precyzji, ale równocześnie uwielbiam czerpać radość ze spontaniczności
-          podróży. <strong>Dla mnie, każdy nowy kierunek to jak nieodkryta księga, pełna fascynujących historii, gotowa
-            do mojego odkrycia.</strong></p>
-        <p>Podróże to dla mnie nie tylko zmiana krajobrazu, ale także nieustanne poszerzanie horyzontów i rozwijanie się
-          jako jednostki. Każdy nowy krok jest dla mnie niepowtarzalnym rozdziałem w tej niezwykłej podróży przez życie,
-          pełnej fascynujących doświadczeń i inspiracji.
+    <Section
+      title="Angelina Kutuzova"
+      body={
+        <>
+          <p>
+            Jestem pasjonatką technologii 💻, z doświadczeniem zawodowym jako{" "}
+            <strong>Strategic Customer Success Manager</strong> w startupie.
+            Obecnie koncentruję się na rozwoju umiejętności programistycznych w
+            zakresie <strong>front-endu</strong>.
           </p>
-          </>} />
+          <p>
+            Moje zainteresowania obejmują szeroką gamę tematów, od muzyki (w tym
+            naukę gry na pianinie 🎹 i śpiew w chórze), przez sztukę, aż po
+            psychologię.
+          </p>
+          <p>
+            Lubię podróżować i chodzić w góry 🏞, odkrywając nowe miejsca i
+            czerpiąc inspirację z natury. Dążę do ciągłego rozwoju i poszerzania
+            swojej wiedzy, łącząc profesjonalizm z pasją do nauki.
+          </p>
+          <p>
+            W wolnym czasie angażuję się w zajęcia z jogi, zumby, salsation oraz
+            biorę udział w wydarzeniach kulturalnych.{" "}
+            <strong>
+              W mojej pracy i życiu kieruję się odpowiedzialnością, dbałością o
+              szczegóły oraz chęcią dzielenia się wiedzą i wspierania innych.
+            </strong>
+          </p>
+        </>
+      }
+    />
   </Container>
 );
