@@ -1,8 +1,8 @@
 # To-do List Application
 
-This web application is your ideal solution for managing tasks effortlessly. 
+This web application helps you manage tasks effortlessly with features like task addition, deletion, and completion toggles—all presented in a user-friendly interface. 
 
-Easily add, remove, and toggle the completion status of tasks with a user-friendly interface to keep your to-do list organized and stay productive!
+Built with modern React practices like custom hooks and styled-components, it combines functionality with sleek design to keep your productivity on track.
 
 ![](https://github.com/akutuzova11/react-to-do-list/blob/main/public/images/gif%20for%20readme%204.gif)
 
@@ -20,6 +20,10 @@ https://akutuzova11.github.io/react-to-do-list/
 - **React**
 
 ### React Features
+- **React Router:** for navigating between application views
+  - `useParams`
+  - `useLocation`
+  - `useHistory`
 - **React Hooks:**
   - `useState`
   - `useEffect`
@@ -28,17 +32,22 @@ https://akutuzova11.github.io/react-to-do-list/
   - `useTasks`
   - `useLocalStorageState`
 
+### State Management
+- **Redux Toolkit:** centralized and efficient state management
+- **Redux-Saga:** handles side effects like async calls with declarative effects
+
 ### Styling
 - **Styled Components:**
   - `GlobalStyle`
   - `Theme`
+- **Normalize CSS:** to standardize styles across browsers
 
 ### Layout & Responsiveness
 - **CSS Layout Techniques:**
   - Grid
   - Flexbox
 - **Responsive Design:**
-  - Media Querie
+  - Media Queries
 
 ### Additional Features
 - **localStorage** for data persistence
@@ -53,6 +62,8 @@ https://akutuzova11.github.io/react-to-do-list/
 5. Click the **checkmark button** to toggle the task's completion status or the **trash can icon** to delete it.
 6. Click the **"Ukończ wszystkie"** button to mark all tasks as completed.
 7. Use the **"Ukryj ukończone"** button to hide or show completed tasks.
+
+Note: The application interface is in Polish, and tasks are saved locally in your browser using `localStorage`.
 
 ## Contributing
 
@@ -100,3 +111,6 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+For more detailed documentation on Create React App, see the [official guide](https://create-react-app.dev/docs/getting-started/).
+
